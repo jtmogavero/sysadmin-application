@@ -1,11 +1,24 @@
-We observe that the experienced nerd often prefers tools which afford a measure
-of customization, and that most hackers accrue some amount of configuration for
-editors, shells, IRC clients, and the like.
+In the last 5 years, I've worked at two different jobs.  At each of these jobs,
+I have responsible for supporting or administrating thousands of Linux / Unix 
+systems.  
 
-This section may, at your option, contain either:
+As a result of always being on a different system any given day, and
+often needing to observe proper change control, I have typically been unable
+to customize anything to my specific needs.  
 
-  a) A collection of dotfiles or other configuration from your working
-     environment.
+Thus, I've become extremely accustomed to using tools with their default behavior, 
+so much so that it's bled into my non-admin computer usage and I rarely customize 
+anything beyond fonts and wallpaper even on my personal computer.  It's a bad habit 
+born of necessity of being an ssh vagabond.    
 
-  b) A rationale for your lack of same.  Responses will be evaluated for
-     both style and content.
+
+That being said, if I could dig up my old .vimrc and .ircrc files, I would gladly
+provide them, but they've been long lost to the ether.  
+
+
+
+
+
+
+
+

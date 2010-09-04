@@ -1,17 +1,61 @@
-Ideal candidates will have experience configuring and managing a range of
-services in the Linux & Unix environment, including e-mail, storage, databases,
-and the web. They will also possess (and be unafraid to use) some programming
-skills well-suited to sysadmin tasks.
+There are four scripts included in this folder, which should give an idea
+of how I've used scripting / coding in work and in education
 
-You must be able to write a useful shell script, and basic proficiency in
-[additional language of your choice] will do wonders for our assessment of your
-capabilities. 
+1)  molar-volume.pl  -- This script was written as an exercise one of my
+upper level chemistry classes at Metropolitan State College.  It computes
+the molar volume of a gas at a specific temperature and pressure.  
 
-Please use this directory to submit relevant samples of your code. For example:
+For those not hip on chemistry, here's a quick lesson:  Any gas will experience 
+changes in volume as temperature and pressure vary.  The molar volume is
+how much space is occupied by one mole (1 mole = 6.02 x 10^23 molecules) of
+a gas at normalized temperature and pressure.  This can be quickly computed
+with the ideal gas equation but only accurately computed with the Van Der
+Waals equation.  This script calculates the two, compares them, and quickly
+converges on a "real" value.  
 
-  - things from some /etc that suggest we'd want to give you root access
-  - shell utilities, services, clever one-liners
-  - whatever else you think would create a reasonable impression of your
-    skills
+The actual web form for this script exists at http://clem.mscd.edu/~mogavero
 
-If you contribute to any open source projects, we'd love to know about them.
+2)  iptables.sh  -- This is a bash script written for the purpose of applying
+an iptables rulebase quickly on the command line.  This was written for the
+purpose of securing EMC Avamar backup arrays, which are Linux based and often
+several revisions behind on patch levels.  Some organizations, such as 
+universities and service providers have these systems on public IP space and
+consequently they are cracked within hours.  (sometimes minutes!)  I wrote 
+this script to provide to such customers to lock down access to the operating
+systems based on information they provide.  
+
+The script included still contains some public IP addresses for the last customer
+who used it, though names have been changed to protect the innocent.  Shhhh.  
+
+The script is typically copied over and run immediately after the OS is installed, 
+and then put into a sensible location and called by the rc.local startup script 
+at boot time.  
+
+3)  portcheck.sh and portcheck.py  --  Often times during the administration
+and support of the above-mentioned Avamar systems we will encounter scenarios
+where clients attempting to back up will be unable to reach the backup servers.
+In situations like these, it's hard to determine if the problem is due to the
+backup servers being unresponsive or if there's loss of network connectivity.
+
+These scripts in combination are used to check response to 4 ICMP echo requests
+and check the status of a given port.  The bash script is called from the command
+line and the python script is called within the bash script.  This is deliberately
+written this way because most of the support organization is familiar with bash
+scripting, but not so much with python and I wanted them to be able to alter
+and customize it as needed without hassling me to rewrite it.  
+
+
+
+In addition to these scripts, I've also contributed to the open source project
+Opsview, which is a fault-tolerant load-balanced superset of Nagios, with a
+SQL back end for trending and reporting.  Some basic Nagios functionality was
+broken when they rewrote portions of it, namely the ability to specify audio
+alarms.  Our NOC relied on these audio alarms to quickly be advised of failures
+so I wrote that functionality back in and sent them the code changes to put into
+the main release.  http://www.opsview.com/community/developer-zone/contributors
+
+
+
+
+
+
