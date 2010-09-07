@@ -55,6 +55,12 @@ so I wrote that functionality back in and sent them the code changes to put into
 the main release.  http://www.opsview.com/community/developer-zone/contributors
 
 
+Not necessarily code related, but I also contributed an article on Nokia Checkpoint firewall 
+redundancy using VRRP to an "open source" network design site that sadly is no longer
+around:  http://www.hanetworks.com    --  
+However, I did find that the article is still available via the Wayback Machine, at the
+the following link:   http://web.archive.org/web/20021023052054/www.hanetworks.com/networks/nokia/vrrp/Jason-Mogavero-VRRP.html
+
 
 
 
